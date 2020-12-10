@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
             'name' 		 => 'Maycol Sanchez',
             'username'   => 'maycoldsm1234',
             'email'      => 'maycoldsm1234@gmail.com',
-            'password'   =>  Hash::make('891012VaJu')
+            'password'   =>  Hash::make('maycoldsm1234')
         ]);
 
         $user->roles()->attach(Role::where('name', 'admin')->first());

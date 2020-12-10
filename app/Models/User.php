@@ -38,6 +38,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public static function rules($id=0, $merge=[]) {
+        return array_merge( 
+            [
+                'username' => 'required|unique:users'.($id ? ",$id" : ''),
+                'name' => 'required',
+                'email' => 'required|email'
+            ],
+            $merge
+        );
+    }
+
     public function roles()
     {
         return $this->belongsToMany(Role::class)->withTimestamps();
@@ -71,4 +82,13 @@ class User extends Authenticatable
         }
         return false;
     }
+
+    public function isAdmin()
+    {
+        if ($this->roles()->where('name', 'admin')->first()) {
+            return true;
+        }
+        return false;
+    }
+
 }

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Clientes;
 use Datatables;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB; 
 use Illuminate\Support\Facades\Validator;
 
 class ClientesController extends Controller
@@ -17,9 +16,7 @@ class ClientesController extends Controller
      * @return void
      */
     public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    {}
 
     /**
      * Show the application dashboard.
@@ -66,7 +63,7 @@ class ClientesController extends Controller
 
     public function editar(Request $request)
     {
-        $paciente = Clientes::find($request->input('id'));
+        $cli = Clientes::find($request->input('id'));
 
         $validator = Validator::make($request->all(), Clientes::rules('id'));
         if ($validator->fails()) :
@@ -77,8 +74,8 @@ class ClientesController extends Controller
         endif;
         
         $data = $request->except(['_token']);
-        $paciente->fill($data);
-		$paciente->save();
+        $cli->fill($data);
+		$cli->save();
         
         return array(
             'success' => true,
@@ -88,8 +85,8 @@ class ClientesController extends Controller
 
     public function eliminar(Request $request)
     {
-        $paciente = Clientes::find($request->input('id'));
-        $paciente->delete();
+        $cli = Clientes::find($request->input('id'));
+        $cli->delete();
         
         return array(
             'success' => true,

@@ -73,7 +73,7 @@
                     </div>
 
                     <ul class="navigation">
-                        {{ view('menus.'.Auth::user()->roles()->first()->name) }}
+                        {{ view('menus.principal') }}
                     </ul>
                 </div>
             </aside>
@@ -83,9 +83,9 @@
                 @yield('content')
 
                 <footer class="footer hidden-xs-down">
-                    <p>© Infosalud. Todos los Derechos Reservados.</p>
-
+                    <p>© Prueba. Todos los Derechos Reservados.</p>
                     <p>Maycol Sanchez, Desarrollador.</p>
+                    <p><img src="{{ asset('img/logo.png') }}" /></p>
                 </footer>
             </section>
         </main>
