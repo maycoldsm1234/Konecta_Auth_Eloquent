@@ -1,0 +1,205 @@
+.btn-file {
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+
+.btn-file>input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    font-size: 23px;
+    height: 100%;
+    width: 100%;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.fileinput {
+    margin-bottom: 9px;
+    display: inline-block;
+}
+
+.fileinput .form-control {
+    padding-top: 7px;
+    padding-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    cursor: text;
+}
+
+.fileinput .thumbnail {
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.fileinput .thumbnail>img {
+    max-height: 100%;
+}
+
+.fileinput .btn {
+    vertical-align: middle;
+}
+
+.fileinput-exists .fileinput-new,
+.fileinput-new .fileinput-exists {
+    display: none;
+}
+
+.fileinput-inline .fileinput-controls {
+    display: inline;
+}
+
+.fileinput-filename {
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.form-control .fileinput-filename {
+    vertical-align: bottom;
+}
+
+.fileinput.input-group {
+    display: table;
+}
+
+.fileinput.input-group>* {
+    position: relative;
+    z-index: 2;
+}
+
+.fileinput.input-group>.btn-file {
+    z-index: 1;
+}
+
+.fileinput-new.input-group .btn-file,
+.fileinput-new .input-group .btn-file {
+    border-radius: 0 2px 2px 0;
+}
+
+.fileinput-new.input-group .btn-file.btn-xs,
+.fileinput-new .input-group .btn-file.btn-xs,
+.fileinput-new.input-group .btn-file.btn-sm,
+.fileinput-new .input-group .btn-file.btn-sm {
+    border-radius: 0 2px 2px 0;
+}
+
+.fileinput-new.input-group .btn-file.btn-lg,
+.fileinput-new .input-group .btn-file.btn-lg {
+    border-radius: 0 2px 2px 0;
+}
+
+.form-group.has-warning .fileinput .fileinput-preview {
+    color: #ffa829;
+}
+
+.form-group.has-warning .fileinput .thumbnail {
+    border-color: #ff760f;
+}
+
+.form-group.is-invalid .fileinput .fileinput-preview {
+    color: #f6675d;
+}
+
+.form-group.is-invalid .fileinput .thumbnail {
+    border-color: #f54556;
+}
+
+.form-group.is-valid .fileinput .fileinput-preview {
+    color: #67bd6a;
+}
+
+.form-group.is-valid .fileinput .thumbnail {
+    border-color: #61b555;
+}
+
+.input-group-addon:not(:first-child) {
+    border-left: 0;
+}
+
+.fileinput {
+    position: relative;
+}
+
+.fileinput .close {
+    position: absolute;
+    top: 5px;
+    font-size: 12px;
+    float: none;
+    opacity: 1;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    width: 19px;
+    text-align: center;
+    height: 19px;
+    line-height: 15px;
+    border-radius: 50%;
+    right: 0;
+}
+
+.fileinput .close:hover {
+    background: #eee;
+}
+
+.fileinput .input-group-addon {
+    padding: 0 10px;
+    vertical-align: middle;
+}
+
+.fileinput .fileinput-preview {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.fileinput .fileinput-preview img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -13px;
+    height: 100%
+}
+
+.fileinput .fileinput-preview:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.thumbnail {
+    display: block;
+    padding: 3px;
+    /* margin-bottom: 18px; */
+    line-height: 1.42857143;
+    background-color: #ffffff;
+    border: 1px solid #ededed;
+    border-radius: 2px;
+    -webkit-transition: border 0.2s ease-in-out;
+    -o-transition: border 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+}
+
+.thumbnail>img,
+.thumbnail a>img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+    border-color: #2196f3;
+}
+
+.thumbnail .caption {
+    padding: 9px;
+    color: #5e5e5e;
+}
